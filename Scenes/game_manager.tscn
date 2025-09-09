@@ -4,6 +4,8 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_oj352"]
 font_size = 111
+outline_size = 25
+outline_color = Color(0, 0, 0, 1)
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_oj352")
