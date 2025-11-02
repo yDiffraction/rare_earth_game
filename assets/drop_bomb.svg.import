@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch71i45mvw4te"
-path="res://.godot/imported/world.svg-e2b3be6731e70c90355d6d041b341648.ctex"
+uid="uid://c07qnjxl3dmjd"
+path="res://.godot/imported/drop_bomb.svg-7c608982597284abc68edf51418beb42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WorldMap2D/assets/world.svg"
-dest_files=["res://.godot/imported/world.svg-e2b3be6731e70c90355d6d041b341648.ctex"]
+source_file="res://assets/drop_bomb.svg"
+dest_files=["res://.godot/imported/drop_bomb.svg-7c608982597284abc68edf51418beb42.ctex"]
 
 [params]
 

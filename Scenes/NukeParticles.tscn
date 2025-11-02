@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyjk8rl2nshxt"]
+
+[ext_resource type="Script" uid="uid://dtmne6c2ykvem" path="res://Scripts/NukeParticles.gd" id="1_dtgbg"]
+
+[sub_resource type="Gradient" id="Gradient_rt3qu"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ocut8"]
+gradient = SubResource("Gradient_rt3qu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_thyab"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+angle_min = 1.07288e-05
+angle_max = 509.5
+spread = 180.0
+initial_velocity_min = 230.1
+initial_velocity_max = 594.35
+gravity = Vector3(0, 0, 0)
+scale_min = 23.05
+scale_max = 32.3
+color = Color(0.579004, 0.19814, 0.236117, 1)
+color_ramp = SubResource("GradientTexture1D_ocut8")
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+amount = 86
+lifetime = 0.64
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_thyab")
+script = ExtResource("1_dtgbg")

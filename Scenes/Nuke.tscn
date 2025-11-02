@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuwert4her8sc"]
+
+[ext_resource type="Script" uid="uid://tkdcn4ykvnu3" path="res://Scripts/NukeScene.gd" id="1_wlg1h"]
+[ext_resource type="PackedScene" uid="uid://dyjk8rl2nshxt" path="res://Scenes/NukeParticles.tscn" id="2_pg7b5"]
+[ext_resource type="Texture2D" uid="uid://c07qnjxl3dmjd" path="res://assets/drop_bomb.svg" id="2_tnk7k"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wlg1h")
+deathParticle = ExtResource("2_pg7b5")
+
+[node name="DropBomb" type="Sprite2D" parent="."]
+rotation = 3.94968
+texture = ExtResource("2_tnk7k")
