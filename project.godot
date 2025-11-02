@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Rare_Earths"
+run/main_scene="uid://d3akiyjaa5tlj"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/vsync/vsync_mode=0
 
 [editor]
 

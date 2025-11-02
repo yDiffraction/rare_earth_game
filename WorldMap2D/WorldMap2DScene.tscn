@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3akiyjaa5tlj"]
+
+[ext_resource type="Texture2D" uid="uid://ch71i45mvw4te" path="res://WorldMap2D/assets/world.svg" id="1_100ey"]
+[ext_resource type="Script" uid="uid://c27jyectjgv4j" path="res://WorldMap2D/MapController.gd" id="1_g4m8v"]
+
+[node name="WorldMap2DScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_g4m8v")
+
+[node name="WorldMap" type="TextureRect" parent="."]
+z_index = -100
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 97.0
+offset_top = 4.0
+offset_right = -76.0
+offset_bottom = -1.0
+mouse_filter = 2
+texture = ExtResource("1_100ey")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CountriesContainer" type="Node2D" parent="."]
+
+[node name="HighlightPolygon" type="Polygon2D" parent="CountriesContainer"]
+
+[node name="Deutschland" type="Area2D" parent="CountriesContainer"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CountriesContainer/Deutschland"]
+polygon = PackedVector2Array(575, 297, 579, 299, 578, 305, 580, 305, 581, 303, 582, 305, 584, 305, 585, 306, 586, 305, 587, 305, 588, 306, 589, 305, 593, 305, 593, 302, 595, 301, 592, 297, 591, 294, 597, 290, 598, 291, 599, 289, 598, 288, 598, 285, 596, 282, 597, 281, 597, 279, 594, 276, 594, 274, 593, 275, 592, 275, 591, 276, 590, 277, 587, 277, 587, 275, 585, 275, 583, 272, 582, 272, 582, 275, 582, 276, 583, 277, 582, 278, 581, 278, 581, 280, 579, 279, 577, 279, 577, 280, 578, 281, 576, 283, 576, 285, 574, 287, 575, 288, 575, 289, 573, 290, 573, 291, 574, 292, 574, 295, 575, 296)
+
+[node name="China" type="Area2D" parent="CountriesContainer"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CountriesContainer/China"]
+polygon = PackedVector2Array(758, 333, 759, 330, 766, 330, 766, 328, 769, 328, 771, 326, 776, 324, 777, 318, 775, 313, 781, 312, 783, 305, 789, 305, 791, 300, 795, 296, 798, 301, 803, 303, 805, 306, 804, 311, 811, 312, 817, 315, 819, 320, 834, 322, 843, 326, 850, 323, 856, 322, 863, 318, 861, 315, 862, 312, 867, 314, 869, 311, 873, 311, 874, 308, 877, 306, 883, 306, 880, 300, 872, 301, 874, 294, 877, 295, 881, 293, 886, 283, 885, 280, 890, 277, 896, 277, 900, 279, 902, 284, 905, 294, 909, 295, 911, 296, 913, 300, 913, 301, 917, 301, 923, 300, 924, 302, 922, 304, 922, 307, 919, 312, 916, 312, 914, 313, 915, 320, 914, 321, 911, 321, 910, 323, 908, 324, 906, 324, 906, 326, 904, 326, 902, 325, 900, 328, 897, 331, 893, 332, 890, 333, 888, 335, 889, 332, 890, 329, 888, 328, 885, 330, 882, 331, 881, 333, 878, 334, 878, 337, 880, 338, 881, 341, 884, 341, 885, 339, 888, 340, 891, 340, 891, 342, 887, 342, 886, 344, 884, 343, 884, 345, 882, 347, 882, 349, 884, 350, 885, 354, 888, 358, 884, 358, 889, 360, 885, 363, 889, 364, 888, 369, 885, 370, 884, 374, 882, 376, 882, 378, 881, 378, 880, 380, 878, 380, 878, 384, 875, 384, 868, 387, 866, 386, 866, 386, 865, 388, 858, 390, 858, 393, 856, 392, 856, 390, 850, 390, 847, 386, 843, 385, 837, 387, 834, 387, 834, 390, 831, 390, 827, 388, 828, 385, 826, 384, 826, 382, 823, 382, 823, 379, 826, 374, 825, 370, 820, 370, 819, 367, 815, 366, 809, 371, 809, 372, 803, 370, 800, 371, 797, 371, 791, 370, 780, 364, 778, 364, 772, 360, 771, 357, 773, 355, 772, 350, 769, 347, 764, 346, 764, 343, 760, 340, 760, 337)
