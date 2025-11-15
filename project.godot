@@ -12,11 +12,15 @@ config_version=5
 
 config/name="Rare_Earths"
 run/main_scene="uid://d3akiyjaa5tlj"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 
 [audio]
 
 buses/default_bus_layout=""
+
+[autoload]
+
+DataLoader="*res://Scenes/data_info_loader.tscn"
 
 [display]
 

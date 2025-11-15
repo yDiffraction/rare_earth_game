@@ -2,7 +2,7 @@ extends Control
 
 @onready var countries_container = $CountriesContainer
 @onready var highlight_poly = countries_container.get_node("HighlightPolygon")
-
+@onready var InfoPanel = $InfoPannel
 func _ready():
 	# connect mouse signals for each country polygon
 	for country in countries_container.get_children():
@@ -16,6 +16,10 @@ func _on_country_mouse_entered(country):
 	highlight_poly.polygon = poly
 	highlight_poly.visible = true
 	
+	InfoPanel.showInfo(country)
+	
 
 func _on_country_mouse_exited(country):
 	highlight_poly.visible = false
+	
+	InfoPanel.hideInfo()

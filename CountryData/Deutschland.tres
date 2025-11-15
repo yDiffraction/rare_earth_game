@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CountryInfo" load_steps=2 format=3 uid="uid://iumdgjwiatrb"]
+
+[ext_resource type="Script" uid="uid://b8wrsim3s4ebw" path="res://Scripts/CountryINfoContainer.gd" id="1_u8mls"]
+
+[resource]
+script = ExtResource("1_u8mls")
+Name = "Deutschland"
+metadata/_custom_type_script = "uid://b8wrsim3s4ebw"

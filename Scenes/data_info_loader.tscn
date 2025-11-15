@@ -1,0 +1,10 @@
+[gd_scene load_steps=5 format=3 uid="uid://din52mluld6gy"]
+
+[ext_resource type="Script" uid="uid://d07wpie33uyaq" path="res://Scripts/DataLoader.gd" id="1_0ab52"]
+[ext_resource type="Script" uid="uid://b8wrsim3s4ebw" path="res://Scripts/CountryINfoContainer.gd" id="2_atbei"]
+[ext_resource type="Resource" uid="uid://bahbqxg155km3" path="res://CountryData/China.tres" id="3_kwo8b"]
+[ext_resource type="Resource" uid="uid://iumdgjwiatrb" path="res://CountryData/Deutschland.tres" id="4_kwo8b"]
+
+[node name="DataInfoLoader" type="Node"]
+script = ExtResource("1_0ab52")
+Countrys = Array[ExtResource("2_atbei")]([ExtResource("3_kwo8b"), ExtResource("4_kwo8b")])
