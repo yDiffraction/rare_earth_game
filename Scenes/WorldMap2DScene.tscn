@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c27jyectjgv4j" path="res://Scripts/WorldMap2DController.gd" id="1_r6rsh"]
 [ext_resource type="Texture2D" uid="uid://ch71i45mvw4te" path="res://assets/world.svg" id="2_324t1"]
 [ext_resource type="Script" uid="uid://cdjxh0ssj3k6h" path="res://Scripts/NukeCaller.gd" id="3_qqiaq"]
-[ext_resource type="Script" uid="uid://bq2oabtchy5xo" path="res://Scripts/scoreboard.gd" id="4_324t1"]
+[ext_resource type="Script" path="res://Scripts/scoreboard.gd" id="4_324t1"]
 
 [node name="WorldMap2DScene" type="Control"]
 layout_mode = 3
@@ -79,6 +79,7 @@ offset_bottom = 143.0
 text = "Wirtschaft: 0%"
 
 [node name="WirtschaftBar" type="ProgressBar" parent="Scoreboard"]
+layout_mode = 0
 offset_left = 30.0
 offset_top = 140.0
 offset_right = 165.0
