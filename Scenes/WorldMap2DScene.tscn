@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c27jyectjgv4j" path="res://Scripts/WorldMap2DController.gd" id="1_r6rsh"]
 [ext_resource type="Texture2D" uid="uid://ch71i45mvw4te" path="res://assets/world.svg" id="2_324t1"]
 [ext_resource type="Script" uid="uid://cdjxh0ssj3k6h" path="res://Scripts/NukeCaller.gd" id="3_qqiaq"]
-[ext_resource type="Script" uid="uid://bofhns1qtcdkf" path="res://Scenes/info_pannel.gd" id="4_324t1"]
+[ext_resource type="Script" path="res://Scenes/info_pannel.gd" id="4_324t1"]
 
 [node name="WorldMap2DScene" type="Control"]
 layout_mode = 3
