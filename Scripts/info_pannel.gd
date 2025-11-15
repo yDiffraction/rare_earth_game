@@ -1,19 +1,18 @@
 extends Panel
 @onready var CountryLabel = $CountryLabel
 @onready var ExportLabel = $ExportLabel
-var current
-var Country
+var country
+var country_data
 var locked = false
 
-func showInfo(country):
-	current = country
+func showInfo(country: Area2D):
+	self.country = country
 	self.visible = true
 	print_debug(country)
-	Country = matchName(current.name)
-	print_debug(Country)
+	country_data = matchName(country.name)
 	if !locked:
-		CountryLabel.text = Country.Name
-		ExportLabel.text = "Export: " + str(Country.Export) + "T"
+		CountryLabel.text = country_data.Name
+		ExportLabel.text = "Export: " + str(country_data.Export) + "T"
 	
 func hideInfo():
 	if !locked:

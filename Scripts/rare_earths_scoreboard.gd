@@ -5,17 +5,12 @@ var EntryScene := preload("res://Scenes/RareEarthScoreboardEntry.tscn")
 
 #name, necessary import (t), current import (t)
 var earthList = [
-	["Neodym", 1000, 0], #90% china
-	["Praseodym", 400, 0],
-	["Dysprosium", 25, 0],
-	["Terbium", 5, 0],
-	["Lanthan", 1250, 0],
-	["Cer", 2500, 0],
-	["Yttrium", 100, 0],
-	["Samarium", 125, 0],
-	["Scandium", 15, 0],
-	["Gadolinium", 30, 0],
-	["Eu,Ho,Er,Tm,Yb,Lu", 50, 0]
+	["NdPr", 1500, 0], #china:10.000t Australien:1.000t USA:1.000t
+	["DyTb", 30, 0], #china:1500t japan:100t vietnam:50t(bisschen teurer) myanmar:1000t(sehr teuer)
+	["LaCe", 4000, 0], #china:20.000t russland:10.000t
+	["Samarium", 125, 0], # usa:200t china:150t indien:150t
+	["ScY", 150, 0], #china:3000t thailand:500t
+	["Eu,Ho,Er,Tm,Yb,Lu,Gd", 100, 0] #uae: 100t nigeria:100t south africa:100t peru:100t 
 ]
 var nodes = {}
 

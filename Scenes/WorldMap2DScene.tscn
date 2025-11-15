@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://c27jyectjgv4j" path="res://Scripts/WorldMap2DController.gd" id="1_r6rsh"]
 [ext_resource type="Texture2D" uid="uid://ch71i45mvw4te" path="res://assets/world.svg" id="2_324t1"]
 [ext_resource type="Script" uid="uid://cdjxh0ssj3k6h" path="res://Scripts/NukeCaller.gd" id="3_qqiaq"]
-[ext_resource type="Script" uid="uid://bofhns1qtcdkf" path="res://info_pannel.gd" id="4_324t1"]
-[ext_resource type="Script" path="res://Scripts/scoreboard.gd" id="5_324t1"]
+[ext_resource type="Script" uid="uid://bofhns1qtcdkf" path="res://Scripts/info_pannel.gd" id="4_muyno"]
+[ext_resource type="Script" uid="uid://bq2oabtchy5xo" path="res://Scripts/scoreboard.gd" id="5_324t1"]
 [ext_resource type="Texture2D" uid="uid://dpt1635ioxyiq" path="res://assets/circle.png" id="5_qqiaq"]
-[ext_resource type="Script" path="res://Scripts/rare_earths_scoreboard.gd" id="6_tuv03"]
-[ext_resource type="Script" uid="uid://djydn1lsmynmr" path="res://Scripts/turn_manager.gd" id="8_muyno"]
+[ext_resource type="Script" uid="uid://0kaheu7ewki8" path="res://Scripts/rare_earths_scoreboard.gd" id="6_tuv03"]
+[ext_resource type="Script" path="res://Scripts/turn_manager.gd" id="8_muyno"]
 
 [node name="WorldMap2DScene" type="Control"]
 layout_mode = 3
@@ -159,7 +159,7 @@ anchor_right = 1.0
 offset_left = -184.0
 offset_bottom = 86.0
 grow_horizontal = 0
-script = ExtResource("4_324t1")
+script = ExtResource("4_muyno")
 
 [node name="CountryLabel" type="Label" parent="InfoPannel"]
 custom_minimum_size = Vector2(-1.035, 0)
@@ -254,7 +254,7 @@ offset_left = 574.0
 offset_top = 545.0
 offset_right = 710.0
 offset_bottom = 681.0
-scale = Vector2(0.53050894, 0.53050894)
+scale = Vector2(0.530509, 0.530509)
 text = "Jahr Simulieren"
 expand_icon = true
 
