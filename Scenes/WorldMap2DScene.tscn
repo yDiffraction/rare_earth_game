@@ -19,12 +19,6 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_r6rsh")
 
-[node name="Seltene Erden" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Seltene Erden: 999T"
-
 [node name="WorldMap" type="TextureRect" parent="."]
 z_index = -100
 layout_mode = 1
@@ -151,40 +145,37 @@ polygon = PackedVector2Array(950.2, 573.2, 952.2, 577.2, 953.2, 581.2, 956.2, 58
 position = Vector2(356, 331)
 script = ExtResource("3_qqiaq")
 
-[node name="InfoPannel" type="Panel" parent="."]
+[node name="InfoPannel" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -184.0
-offset_bottom = 86.0
+offset_left = -1140.0
+offset_top = 4.0
+offset_right = -940.0
+offset_bottom = 90.0
 grow_horizontal = 0
 script = ExtResource("4_muyno")
 
-[node name="CountryLabel" type="Label" parent="InfoPannel"]
-custom_minimum_size = Vector2(-1.035, 0)
-layout_mode = 0
-offset_left = 3.0
-offset_top = 1.0
-offset_right = 45.0
-offset_bottom = 24.0
-text = "UASA"
+[node name="HBoxContainer" type="HBoxContainer" parent="InfoPannel"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
 
-[node name="ExportLabel" type="Label" parent="InfoPannel"]
+[node name="CountryLabel" type="Label" parent="InfoPannel/HBoxContainer"]
 custom_minimum_size = Vector2(-1.035, 0)
-layout_mode = 0
-offset_left = 6.0
-offset_top = 27.0
-offset_right = 48.0
-offset_bottom = 50.0
-text = "Export: 0T"
+layout_mode = 2
+text = "A"
 
-[node name="ExitButton" type="Button" parent="InfoPannel"]
-layout_mode = 0
-offset_left = 164.0
-offset_right = 182.0
-offset_bottom = 31.0
+[node name="Control" type="Control" parent="InfoPannel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ExitButton" type="Button" parent="InfoPannel/HBoxContainer"]
+layout_mode = 2
 text = "X"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InfoPannel"]
+layout_mode = 2
 
 [node name="TradeRoute" type="Line2D" parent="."]
 position = Vector2(653, 291)
@@ -198,36 +189,36 @@ script = ExtResource("5_324t1")
 
 [node name="Zufriedenheit" type="Label" parent="Scoreboard"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 50.0
-offset_right = 167.0
-offset_bottom = 73.0
+offset_left = 966.0
+offset_top = 1.0
+offset_right = 1103.0
+offset_bottom = 24.0
 text = "Zufriedenheit: 0%"
 
 [node name="ZufriedenheitBar" type="ProgressBar" parent="Scoreboard"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 70.0
-offset_right = 165.0
-offset_bottom = 97.0
+offset_left = 966.0
+offset_top = 21.0
+offset_right = 1101.0
+offset_bottom = 48.0
 step = 1.0
 value = 20.0
 show_percentage = false
 
 [node name="Wirtschaft" type="Label" parent="Scoreboard"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 120.0
-offset_right = 142.0
-offset_bottom = 143.0
+offset_left = 966.0
+offset_top = 71.0
+offset_right = 1078.0
+offset_bottom = 94.0
 text = "Wirtschaft: 0%"
 
 [node name="WirtschaftBar" type="ProgressBar" parent="Scoreboard"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 140.0
-offset_right = 165.0
-offset_bottom = 167.0
+offset_left = 966.0
+offset_top = 91.0
+offset_right = 1101.0
+offset_bottom = 118.0
 step = 1.0
 show_percentage = false
 
@@ -258,5 +249,5 @@ scale = Vector2(0.530509, 0.530509)
 text = "Jahr Simulieren"
 expand_icon = true
 
-[connection signal="pressed" from="InfoPannel/ExitButton" to="InfoPannel" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="InfoPannel/HBoxContainer/ExitButton" to="InfoPannel" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="playButton" to="TurnManager" method="_on_play_button_pressed"]

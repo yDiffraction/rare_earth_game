@@ -8,9 +8,9 @@ var earthList = [
 	["NdPr", 1500, 0], #china:10.000t Australien:1.000t USA:1.000t
 	["DyTb", 30, 0], #china:1500t japan:100t vietnam:50t(bisschen teurer) myanmar:1000t(sehr teuer)
 	["LaCe", 4000, 0], #china:20.000t russland:10.000t
-	["Samarium", 125, 0], # usa:200t china:150t indien:150t
+	["Sm", 125, 0], # usa:200t china:150t indien:150t
 	["ScY", 150, 0], #china:3000t thailand:500t
-	["Eu,Ho,Er,Tm,Yb,Lu,Gd", 100, 0] #uae: 100t nigeria:100t south africa:100t peru:100t 
+	["Sonstige", 100, 0] #uae: 100t nigeria:100t south africa:100t peru:100t 
 ]
 var nodes = {}
 
