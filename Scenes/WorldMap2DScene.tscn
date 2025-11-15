@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ch71i45mvw4te" path="res://assets/world.svg" id="2_324t1"]
 [ext_resource type="Script" uid="uid://cdjxh0ssj3k6h" path="res://Scripts/NukeCaller.gd" id="3_qqiaq"]
 [ext_resource type="Script" path="res://Scenes/info_pannel.gd" id="4_324t1"]
+[ext_resource type="Script" path="res://Scripts/scoreboard.gd" id="4_324t1"]
 
 [node name="WorldMap2DScene" type="Control"]
 layout_mode = 3
@@ -87,3 +88,42 @@ position = Vector2(584, 291)
 points = PackedVector2Array(0, 0, -16, -20, -69, -12, -78, 31, -66, 49, -49, 55, -16, 51, 20, 46, 54, 54, 63, 75, 71, 92, 89, 120, 111, 125, 139, 124, 156, 136, 188, 148, 226, 140, 236, 143, 253, 156, 265, 164, 282, 137, 280, 104, 278, 96)
 width = 4.87
 texture_mode = 1
+
+[node name="Scoreboard" type="Control" parent="."]
+anchors_preset = 0
+script = ExtResource("4_324t1")
+
+[node name="Zufriedenheit" type="Label" parent="Scoreboard"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 50.0
+offset_right = 167.0
+offset_bottom = 73.0
+text = "Zufriedenheit: 0%"
+
+[node name="ZufriedenheitBar" type="ProgressBar" parent="Scoreboard"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 70.0
+offset_right = 165.0
+offset_bottom = 97.0
+step = 1.0
+value = 20.0
+show_percentage = false
+
+[node name="Wirtschaft" type="Label" parent="Scoreboard"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 120.0
+offset_right = 142.0
+offset_bottom = 143.0
+text = "Wirtschaft: 0%"
+
+[node name="WirtschaftBar" type="ProgressBar" parent="Scoreboard"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 140.0
+offset_right = 165.0
+offset_bottom = 167.0
+step = 1.0
+show_percentage = false
