@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CountryInfo" load_steps=2 format=3 uid="uid://bg3e748bv7840"]
+
+[ext_resource type="Script" uid="uid://b8wrsim3s4ebw" path="res://Scripts/CountryINfoContainer.gd" id="1_4l3q0"]
+
+[resource]
+script = ExtResource("1_4l3q0")
+Name = "UK"
+Export = 800
+Path = PackedVector2Array(0, -11, -9, -17, -14, -19, -19, -19, -22, -17, -25, -16, -29, -15)
+metadata/_custom_type_script = "uid://b8wrsim3s4ebw"

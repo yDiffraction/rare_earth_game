@@ -8,7 +8,7 @@ func showInfo(country):
 	current = country
 	self.visible = true
 	print_debug(country)
-	Country = DataLoader.Countrys[DataLoader.Countrys.find_custom(matchName)]
+	Country = matchName(current.name)
 	print_debug(Country)
 	CountryLabel.text = Country.Name
 	ExportLabel.text = "Export: " + str(Country.Export) + "T"
@@ -20,5 +20,6 @@ func _ready() -> void:
 	hideInfo()
 	
 func matchName(name):
-	if(name.Name == current.name):
-		return true
+	for c in DataLoader.Countrys:
+		if c.Name == name:
+			return c
