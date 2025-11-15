@@ -146,7 +146,6 @@ texture_mode = 1
 
 [node name="Scoreboard" type="Control" parent="."]
 anchors_preset = 0
-script = ExtResource("4_324t1")
 
 [node name="Zufriedenheit" type="Label" parent="Scoreboard"]
 layout_mode = 0
