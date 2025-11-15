@@ -5,7 +5,7 @@ var EntryScene := preload("res://Scenes/RareEarthScoreboardEntry.tscn")
 
 #name, necessary import (t), current import (t)
 var earthList = [
-	["Neodym", 1000, 0],
+	["Neodym", 1000, 0], #90% china
 	["Praseodym", 400, 0],
 	["Dysprosium", 25, 0],
 	["Terbium", 5, 0],
