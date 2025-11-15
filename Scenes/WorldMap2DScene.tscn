@@ -84,6 +84,5 @@ text = "Export: 0T"
 
 [node name="TradeRoute" type="Line2D" parent="."]
 position = Vector2(584, 291)
-points = PackedVector2Array(0, 0, -16, -20, -69, -12, -78, 31, -66, 49, -49, 55, -16, 51, 20, 46, 54, 54, 63, 75, 71, 92, 89, 120, 111, 125, 139, 124, 156, 136, 188, 148, 226, 140, 236, 143, 253, 156, 265, 164, 282, 137, 280, 104, 278, 96)
 width = 4.87
 texture_mode = 1
