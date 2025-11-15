@@ -4,10 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://ch71i45mvw4te" path="res://assets/world.svg" id="2_324t1"]
 [ext_resource type="Script" uid="uid://cdjxh0ssj3k6h" path="res://Scripts/NukeCaller.gd" id="3_qqiaq"]
 [ext_resource type="Script" uid="uid://bofhns1qtcdkf" path="res://Scenes/info_pannel.gd" id="4_324t1"]
-[ext_resource type="Texture2D" uid="uid://dpt1635ioxyiq" path="res://assets/circle.png" id="5_qqiaq"]
-[ext_resource type="Script" path="res://Scenes/info_pannel.gd" id="4_324t1"]
 [ext_resource type="Script" uid="uid://bq2oabtchy5xo" path="res://Scripts/scoreboard.gd" id="5_324t1"]
-[ext_resource type="Script" uid="uid://0kaheu7ewki8" path="res://Scripts/rare_earths_scoreboard.gd" id="6_tuv03"]
+[ext_resource type="Texture2D" uid="uid://dpt1635ioxyiq" path="res://assets/circle.png" id="5_qqiaq"]
+[ext_resource type="Script" path="res://Scripts/rare_earths_scoreboard.gd" id="6_tuv03"]
 
 [node name="WorldMap2DScene" type="Control"]
 layout_mode = 3
@@ -40,77 +39,104 @@ texture = ExtResource("2_324t1")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="CountriesContainer" type="Node2D" parent="."]
+[node name="CountriesContainer" type="Node2D" parent="WorldMap"]
+position = Vector2(-166, -4)
 
-[node name="Deutschland" type="Area2D" parent="CountriesContainer"]
+[node name="Deutschland" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CountriesContainer/Deutschland"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Deutschland"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(575, 297, 579, 299, 578, 305, 580, 305, 581, 303, 582, 305, 584, 305, 585, 306, 586, 305, 587, 305, 588, 306, 589, 305, 593, 305, 593, 302, 595, 301, 592, 297, 591, 294, 597, 290, 598, 291, 599, 289, 598, 288, 598, 285, 596, 282, 597, 281, 597, 279, 594, 276, 594, 274, 593, 275, 592, 275, 591, 276, 590, 277, 587, 277, 587, 275, 585, 275, 583, 272, 582, 272, 582, 275, 582, 276, 583, 277, 582, 278, 581, 278, 581, 280, 579, 279, 577, 279, 577, 280, 578, 281, 576, 283, 576, 285, 574, 287, 575, 288, 575, 289, 573, 290, 573, 291, 574, 292, 574, 295, 575, 296)
 
-[node name="China" type="Area2D" parent="CountriesContainer"]
+[node name="China" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CountriesContainer/China"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/China"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(758, 333, 759, 330, 766, 330, 766, 328, 769, 328, 771, 326, 776, 324, 777, 318, 775, 313, 781, 312, 783, 305, 789, 305, 791, 300, 795, 296, 798, 301, 803, 303, 805, 306, 804, 311, 811, 312, 817, 315, 819, 320, 834, 322, 843, 326, 850, 323, 856, 322, 863, 318, 861, 315, 862, 312, 867, 314, 869, 311, 873, 311, 874, 308, 877, 306, 883, 306, 880, 300, 872, 301, 874, 294, 877, 295, 881, 293, 886, 283, 885, 280, 890, 277, 896, 277, 900, 279, 902, 284, 905, 294, 909, 295, 911, 296, 913, 300, 913, 301, 917, 301, 923, 300, 924, 302, 922, 304, 922, 307, 919, 312, 916, 312, 914, 313, 915, 320, 914, 321, 911, 321, 910, 323, 908, 324, 906, 324, 906, 326, 904, 326, 902, 325, 900, 328, 897, 331, 893, 332, 890, 333, 888, 335, 889, 332, 890, 329, 888, 328, 885, 330, 882, 331, 881, 333, 878, 334, 878, 337, 880, 338, 881, 341, 884, 341, 885, 339, 888, 340, 891, 340, 891, 342, 887, 342, 886, 344, 884, 343, 884, 345, 882, 347, 882, 349, 884, 350, 885, 354, 888, 358, 884, 358, 889, 360, 885, 363, 889, 364, 888, 369, 885, 370, 884, 374, 882, 376, 882, 378, 881, 378, 880, 380, 878, 380, 878, 384, 875, 384, 868, 387, 866, 386, 866, 386, 865, 388, 858, 390, 858, 393, 856, 392, 856, 390, 850, 390, 847, 386, 843, 385, 837, 387, 834, 387, 834, 390, 831, 390, 827, 388, 828, 385, 826, 384, 826, 382, 823, 382, 823, 379, 826, 374, 825, 370, 820, 370, 819, 367, 815, 366, 809, 371, 809, 372, 803, 370, 800, 371, 797, 371, 791, 370, 780, 364, 778, 364, 772, 360, 771, 357, 773, 355, 772, 350, 769, 347, 764, 346, 764, 343, 760, 340, 760, 337)
 
-[node name="Thailand" type="Area2D" parent="CountriesContainer"]
+[node name="Thailand" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CountriesContainer/Thailand"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Thailand"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(835, 434, 833, 432, 831, 432, 831, 428, 828, 426, 828, 424, 830, 416, 831, 415, 832, 416, 834, 417, 835, 417, 836, 415, 837, 413, 843, 412, 845, 409, 844, 407, 843, 406, 843, 404, 841, 401, 840, 401, 837, 402, 834, 401, 832, 404, 833, 402, 833, 399, 830, 397, 828, 396, 824, 396, 824, 398, 823, 402, 824, 404, 825, 407, 825, 410, 825, 412, 824, 414, 825, 415, 826, 417, 826, 421, 826, 423, 826, 425, 826, 426, 825, 427, 825, 429, 827, 429, 828, 431, 828, 433, 830, 434, 831, 435, 833, 436, 835, 435)
 
-[node name="Frankreich" type="Area2D" parent="CountriesContainer"]
+[node name="Frankreich" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CountriesContainer/Frankreich"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Frankreich"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(579, 319, 579, 319, 576, 318, 576, 314, 576, 311, 574, 308, 578, 305, 579, 299, 575, 297, 573, 297, 571, 295, 570, 295, 568, 294, 564, 291, 562, 291, 562, 293, 560, 295, 558, 295, 558, 297, 555, 297, 554, 296, 553, 296, 553, 297, 553, 299, 554, 300, 550, 300, 549, 299, 548, 299, 548, 300, 545, 300, 545, 301, 545, 302, 546, 303, 547, 304, 549, 304, 550, 305, 551, 306, 551, 308, 552, 309, 554, 310, 555, 313, 554, 315, 554, 317, 553, 319, 553, 321, 555, 323, 557, 323, 561, 323, 562, 324, 566, 324, 566, 323, 566, 322, 567, 321, 568, 320, 570, 321, 571, 321, 573, 322, 575, 322, 576, 321, 577, 320)
 
-[node name="USA" type="Area2D" parent="CountriesContainer"]
+[node name="USA" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CountriesContainer/USA"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/USA"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(351, 348, 351, 345, 349, 342, 349, 339, 352, 339, 356, 333, 357, 330, 361, 328, 366, 326, 366, 321, 372, 318, 374, 314, 373, 307, 369, 306, 367, 309, 365, 312, 358, 314, 353, 315, 350, 319, 345, 322, 342, 325, 335, 328, 332, 328, 331, 327, 333, 324, 335, 323, 334, 321, 332, 318, 329, 319, 331, 314, 329, 313, 326, 312, 324, 315, 322, 319, 322, 322, 322, 325, 321, 327, 319, 326, 318, 320, 318, 315, 322, 311, 327, 310, 329, 310, 327, 308, 325, 308, 320, 308, 318, 306, 315, 308, 311, 308, 308, 308, 312, 303, 299, 299, 224, 299, 225, 305, 224, 306, 222, 306, 222, 302, 219, 302, 218, 303, 219, 307, 221, 310, 221, 313, 220, 317, 220, 318, 220, 321, 219, 327, 219, 333, 222, 336, 224, 341, 226, 347, 230, 352, 237, 355, 241, 359, 245, 359, 251, 361, 257, 362, 263, 362, 267, 360, 272, 364, 276, 369, 279, 369, 281, 367, 285, 372, 287, 375, 290, 377, 291, 378, 293, 377, 292, 373, 295, 370, 300, 368, 305, 366, 309, 368, 312, 369, 315, 368, 316, 365, 322, 365, 328, 368, 331, 368, 332, 370, 333, 374, 335, 378, 336, 381, 339, 381, 340, 378, 339, 374, 337, 371, 337, 367, 337, 363, 336, 359, 343, 355, 347, 351)
 
-[node name="UAE" type="Area2D" parent="CountriesContainer"]
+[node name="UAE" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CountriesContainer/UAE"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/UAE"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(708, 387, 709, 384, 711, 381, 711, 378, 707, 382, 705, 384, 699, 384, 699, 386, 701, 387, 706, 388, 708, 389)
 
-[node name="Japan" type="Area2D" parent="CountriesContainer"]
+[node name="Japan" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CountriesContainer/Japan"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Japan"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(914, 354, 919, 353, 924, 350, 925, 352, 926, 354, 927, 355, 929, 352, 929, 350, 931, 351, 936, 351, 939, 349, 941, 345, 941, 340, 944, 335, 944, 330, 941, 329, 939, 329, 939, 334, 937, 338, 936, 340, 934, 343, 933, 344, 931, 342, 928, 345, 927, 347, 924, 348, 918, 349, 917, 350, 913, 353, 911, 355, 910, 357, 912, 358, 912, 360, 913, 362, 916, 362, 916, 358, 917, 356)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="CountriesContainer/Japan"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Japan"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(918, 357, 918, 355, 920, 353, 922, 353, 923, 352, 924, 354, 923, 355, 922, 356, 920, 356, 920, 357)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="CountriesContainer/Japan"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Japan"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(941, 327, 940, 325, 940, 324, 944, 324, 947, 326, 951, 323, 953, 322, 952, 319, 948, 318, 946, 316, 944, 312, 943, 315, 943, 319, 942, 321, 940, 321, 939, 322, 938, 324, 938, 326, 938, 328, 939, 328)
 
-[node name="Nigeria" type="Area2D" parent="CountriesContainer"]
+[node name="Nigeria" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CountriesContainer/Nigeria"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Nigeria"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(581, 438, 581, 435, 585, 432, 588, 432, 590, 429, 593, 425, 595, 421, 596, 418, 595, 415, 593, 414, 591, 415, 588, 416, 583, 416, 579, 417, 576, 417, 574, 415, 573, 414, 568, 415, 566, 418, 566, 420, 567, 422, 567, 424, 566, 426, 565, 430, 565, 432, 565, 435, 570, 434, 570, 435, 572, 437, 573, 439, 574, 440, 578, 439)
 
-[node name="UK" type="Area2D" parent="CountriesContainer"]
+[node name="UK" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CountriesContainer/UK"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/UK"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(542, 294, 544, 291, 548, 290, 550, 289, 550, 288, 549, 288, 547, 288, 545, 287, 544, 287, 543, 286, 546, 285, 547, 283, 545, 281, 547, 280, 549, 280, 549, 278, 549, 276, 548, 275, 548, 273, 544, 273, 543, 272, 544, 271, 545, 269, 544, 268, 544, 269, 543, 270, 542, 269, 541, 267, 540, 266, 540, 264, 541, 263, 540, 262, 539, 261, 540, 259, 541, 261, 542, 261, 542, 258, 544, 255, 546, 255, 548, 255, 548, 257, 546, 258, 547, 259, 550, 259, 552, 260, 552, 262, 551, 265, 549, 267, 548, 268, 550, 268, 552, 268, 553, 270, 553, 271, 554, 273, 554, 274, 557, 276, 557, 277, 557, 279, 558, 280, 558, 281, 558, 282, 560, 282, 562, 283, 562, 284, 562, 285, 561, 286, 560, 287, 559, 288, 559, 289, 561, 289, 561, 290, 560, 290, 558, 291, 558, 291, 557, 292, 555, 292, 554, 292, 552, 292, 550, 292, 549, 292, 548, 292, 547, 293, 546, 294, 544, 293, 543, 294)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="CountriesContainer/UK"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/UK"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(540, 277, 538, 276, 536, 276, 536, 275, 534, 273, 536, 272, 538, 271, 538, 271, 540, 272, 541, 273, 542, 274, 542, 275, 541, 276)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="CountriesContainer/UK"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/UK"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(538, 262, 538, 258, 540, 257, 541, 256, 541, 254, 539, 255, 538, 256, 538, 257, 537, 259, 537, 261)
 
-[node name="Peru" type="Area2D" parent="CountriesContainer"]
+[node name="Peru" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CountriesContainer/Peru"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Peru"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(366, 502, 369, 501, 370, 500, 369, 499, 369, 496, 370, 495, 369, 493, 369, 489, 370, 488, 370, 484, 369, 481, 367, 480, 365, 479, 365, 477, 361, 477, 358, 476, 357, 473, 357, 470, 358, 466, 361, 465, 364, 463, 366, 462, 366, 458, 362, 458, 358, 458, 355, 454, 354, 453, 353, 453, 352, 455, 351, 457, 348, 459, 345, 461, 344, 462, 343, 464, 341, 464, 338, 463, 337, 463, 336, 464, 336, 466, 337, 467, 336, 468, 337, 469, 339, 469, 340, 471, 342, 475, 343, 478, 346, 481, 347, 482, 349, 486, 350, 489, 350, 491, 351, 492, 353, 494, 357, 496, 360, 498, 363, 499, 364, 500)
 
-[node name="Rumänien" type="Area2D" parent="CountriesContainer"]
+[node name="Rumänien" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CountriesContainer/Rumänien"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Rumänien"]
+position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(638, 314, 635, 314, 635, 310, 631, 305, 631, 302, 628, 302, 627, 303, 621, 303, 618, 304, 616, 308, 613, 311, 614, 313, 617, 315, 619, 318, 620, 319, 625, 320, 626, 320, 631, 318, 633, 319, 634, 319, 635, 321, 635, 318, 636, 316, 638, 316)
 
 [node name="NukeSpawnpoint" type="Node2D" parent="."]
-position = Vector2(287, 331)
+position = Vector2(356, 331)
 script = ExtResource("3_qqiaq")
 
 [node name="InfoPannel" type="Panel" parent="."]
@@ -142,7 +168,7 @@ offset_bottom = 50.0
 text = "Export: 0T"
 
 [node name="TradeRoute" type="Line2D" parent="."]
-position = Vector2(584, 291)
+position = Vector2(653, 291)
 width = 2.935
 texture = ExtResource("5_qqiaq")
 texture_mode = 1

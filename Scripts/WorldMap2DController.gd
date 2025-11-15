@@ -1,6 +1,6 @@
 extends Control
 
-@onready var countries_container = $CountriesContainer
+@onready var countries_container = $WorldMap/CountriesContainer
 @onready var highlight_poly :=  preload("res://Scenes/highlight_polygon.tscn")
 @onready var InfoPanel = $InfoPannel
 @onready var TradeRouteDisplay = $TradeRoute
