@@ -7,4 +7,5 @@ script = ExtResource("1_u8mls")
 Name = "Deutschland"
 Export = 0
 Path = PackedVector2Array()
+Exports = []
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"
