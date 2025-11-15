@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Events" load_steps=2 format=3 uid="uid://br3jlkfu5xyh1"]
+
+[ext_resource type="Script" uid="uid://ux1376en0ad4" path="res://Scripts/Event.gd" id="1_uuqvt"]
+
+[resource]
+script = ExtResource("1_uuqvt")
+Name = "Epidemie in China!"
+Beschreibung = "Aufgrund des Corona Viruses hat sich die Chinesische Regierung dazu entschieden jegliche vorm von export und weiterem herunterzufahren. Alle Chinesichen Exporte -80%"
+metadata/_custom_type_script = "uid://ux1376en0ad4"

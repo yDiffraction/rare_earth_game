@@ -258,6 +258,16 @@ scale = Vector2(0.72, 0.72)
 [node name="TurnManager" type="Node" parent="."]
 script = ExtResource("8_muyno")
 
+[node name="DEBUGEVENT BUTTON" type="Button" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 549.0
+offset_right = 636.0
+offset_bottom = 685.0
+scale = Vector2(0.53050894, 0.53050894)
+text = "EVENT TEST"
+expand_icon = true
+
 [node name="playButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 574.0
@@ -269,4 +279,5 @@ text = "Jahr Simulieren"
 expand_icon = true
 
 [connection signal="pressed" from="InfoPannel/ExitButton" to="InfoPannel" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="DEBUGEVENT BUTTON" to="TurnManager" method="_on_debugevent_button_pressed"]
 [connection signal="pressed" from="playButton" to="TurnManager" method="_on_play_button_pressed"]
