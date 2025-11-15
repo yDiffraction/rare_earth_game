@@ -6,4 +6,5 @@
 script = ExtResource("1_5qwoj")
 Name = "China"
 Export = 99
+Path = PackedVector2Array(0, 0, -16, -20, -69, -12, -78, 31, -66, 49, -49, 55, -16, 51, 20, 46, 54, 54, 63, 75, 71, 92, 89, 120, 111, 125, 139, 124, 156, 136, 188, 148, 226, 140, 236, 143, 253, 156, 265, 164, 282, 137, 280, 104, 278, 96)
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"

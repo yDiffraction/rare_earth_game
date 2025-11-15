@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CountryInfo" load_steps=2 format=3 uid="uid://bahxxh4nvgxqq"]
+
+[ext_resource type="Script" uid="uid://b8wrsim3s4ebw" path="res://Scripts/CountryINfoContainer.gd" id="1_t8vwf"]
+
+[resource]
+script = ExtResource("1_t8vwf")
+Name = "USA"
+Export = 2135
+Path = PackedVector2Array(-2, -4, -6, -19, -12, -18, -22, -7, -22, -3, -29, 4, -41, 7, -60, 15, -79, 16, -103, 25, -131, 45, -158, 53, -193, 56, -227, 49, -267, 47)
+metadata/_custom_type_script = "uid://b8wrsim3s4ebw"
