@@ -86,7 +86,6 @@ position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(708, 387, 709, 384, 711, 381, 711, 378, 707, 382, 705, 384, 699, 384, 699, 386, 701, 387, 706, 388, 708, 389)
 
 [node name="Japan" type="Area2D" parent="WorldMap/CountriesContainer"]
-modulate = Color(0, 0.619657, 0.6209815, 1)
 position = Vector2(-69, 0)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Japan"]
@@ -136,6 +135,17 @@ position = Vector2(-69, 0)
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Rumänien"]
 position = Vector2(137.8, -1.2)
 polygon = PackedVector2Array(638, 314, 635, 314, 635, 310, 631, 305, 631, 302, 628, 302, 627, 303, 621, 303, 618, 304, 616, 308, 613, 311, 614, 313, 617, 315, 619, 318, 620, 319, 625, 320, 626, 320, 631, 318, 633, 319, 634, 319, 635, 321, 635, 318, 636, 316, 638, 316)
+
+[node name="Australien" type="Area2D" parent="WorldMap/CountriesContainer"]
+position = Vector2(-69, 0)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Australien"]
+position = Vector2(137.8, -1.2)
+polygon = PackedVector2Array(869.2, 552.2, 871.2, 547.2, 870.2, 540.2, 866.2, 528.2, 864.2, 523.2, 867.2, 524.2, 866.2, 519.2, 867.2, 514.2, 875.2, 509.2, 881.2, 507.2, 887.2, 505.2, 889.2, 500.2, 891.2, 497.2, 895.2, 498.2, 895.2, 495.2, 900.2, 491.2, 906.2, 491.2, 908.2, 493.2, 910.2, 492.2, 911.2, 487.2, 917.2, 485.2, 921.2, 484.2, 930.2, 486.2, 928.2, 489.2, 925.2, 493.2, 928.2, 495.2, 932.2, 496.2, 935.2, 498.2, 941.2, 500.2, 941.2, 494.2, 944.2, 486.2, 945.2, 482.2, 948.2, 490.2, 951.2, 493.2, 955.2, 499.2, 957.2, 504.2, 960.2, 507.2, 965.2, 513.2, 968.2, 519.2, 971.2, 520.2, 974.2, 526.2, 976.2, 532.2, 975.2, 539.2, 973.2, 543.2, 972.2, 547.2, 968.2, 552.2, 966.2, 557.2, 965.2, 562.2, 963.2, 564.2, 958.2, 566.2, 953.2, 567.2, 951.2, 564.2, 949.2, 565.2, 943.2, 566.2, 938.2, 564.2, 938.2, 560.2, 935.2, 555.2, 934.2, 552.2, 931.2, 555.2, 930.2, 552.2, 932.2, 548.2, 928.2, 551.2, 927.2, 553.2, 925.2, 552.2, 923.2, 546.2, 919.2, 544.2, 914.2, 543.2, 903.2, 544.2, 897.2, 546.2, 894.2, 550.2, 886.2, 550.2, 879.2, 553.2, 875.2, 554.2)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="WorldMap/CountriesContainer/Australien"]
+position = Vector2(137.8, -1.2)
+polygon = PackedVector2Array(950.2, 573.2, 952.2, 577.2, 953.2, 581.2, 956.2, 584.2, 958.2, 583.2, 960.2, 579.2, 961.2, 574.2, 958.2, 573.2, 955.2, 574.2)
 
 [node name="NukeSpawnpoint" type="Node2D" parent="."]
 position = Vector2(356, 331)
