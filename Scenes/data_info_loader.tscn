@@ -1,19 +1,21 @@
-[gd_scene load_steps=14 format=3 uid="uid://din52mluld6gy"]
+[gd_scene load_steps=16 format=3 uid="uid://din52mluld6gy"]
 
 [ext_resource type="Script" uid="uid://d07wpie33uyaq" path="res://Scripts/DataLoader.gd" id="1_0ab52"]
 [ext_resource type="Script" uid="uid://b8wrsim3s4ebw" path="res://Scripts/CountryINfoContainer.gd" id="2_atbei"]
+[ext_resource type="Resource" uid="uid://bbdhubtnhnpmg" path="res://CountryData/Australien.tres" id="3_7sndx"]
 [ext_resource type="Resource" uid="uid://bahbqxg155km3" path="res://CountryData/China.tres" id="3_kwo8b"]
 [ext_resource type="Resource" uid="uid://iumdgjwiatrb" path="res://CountryData/Deutschland.tres" id="4_kwo8b"]
 [ext_resource type="Resource" uid="uid://culrqkck1p1es" path="res://CountryData/Thailand.tres" id="5_hgyyt"]
-[ext_resource type="Resource" uid="uid://dl2mrlfa61fvu" path="res://CountryData/Frankreich.tres" id="6_xffi0"]
+[ext_resource type="Resource" uid="uid://ccf8iod243mkv" path="res://CountryData/Indien.tres" id="6_djb0q"]
 [ext_resource type="Resource" uid="uid://bahxxh4nvgxqq" path="res://CountryData/USA.tres" id="7_d3ed2"]
 [ext_resource type="Resource" uid="uid://dvr2nuwk8uiol" path="res://CountryData/UAE.tres" id="8_23sld"]
+[ext_resource type="Resource" uid="uid://cf5osqu64waja" path="res://CountryData/Myanmar.tres" id="8_522x6"]
 [ext_resource type="Resource" uid="uid://bu4iokfdviy0t" path="res://CountryData/Japan.tres" id="9_1mhro"]
 [ext_resource type="Resource" uid="uid://cdp81ehofuhvv" path="res://CountryData/Nigeria.tres" id="10_53vv0"]
-[ext_resource type="Resource" uid="uid://bg3e748bv7840" path="res://CountryData/UK.tres" id="11_cul00"]
+[ext_resource type="Resource" uid="uid://nh5a2i3to3xn" path="res://CountryData/Süd Afrika.tres" id="11_ttmbs"]
 [ext_resource type="Resource" uid="uid://cl8jt1mfkropp" path="res://CountryData/Peru.tres" id="12_gvhf8"]
-[ext_resource type="Resource" uid="uid://kpipx55k2o2i" path="res://CountryData/Rumänien.tres" id="13_y7j0g"]
+[ext_resource type="Resource" uid="uid://bivbcwy5onbah" path="res://CountryData/Vietnam.tres" id="15_0d2hc"]
 
 [node name="DataInfoLoader" type="Node"]
 script = ExtResource("1_0ab52")
-Countrys = Array[ExtResource("2_atbei")]([ExtResource("4_kwo8b"), ExtResource("3_kwo8b"), ExtResource("5_hgyyt"), ExtResource("6_xffi0"), ExtResource("7_d3ed2"), ExtResource("8_23sld"), ExtResource("9_1mhro"), ExtResource("10_53vv0"), ExtResource("11_cul00"), ExtResource("12_gvhf8"), ExtResource("13_y7j0g")])
+Countrys = Array[ExtResource("2_atbei")]([ExtResource("3_7sndx"), ExtResource("3_kwo8b"), ExtResource("4_kwo8b"), ExtResource("6_djb0q"), ExtResource("9_1mhro"), ExtResource("8_522x6"), ExtResource("10_53vv0"), ExtResource("12_gvhf8"), ExtResource("11_ttmbs"), ExtResource("5_hgyyt"), ExtResource("8_23sld"), ExtResource("7_d3ed2"), ExtResource("15_0d2hc")])
