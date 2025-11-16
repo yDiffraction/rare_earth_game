@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ci4brwyw660re"]
+
+[ext_resource type="FontFile" uid="uid://lnki723hijn4" path="res://Font/Balgio.otf" id="1_6vt6r"]
+
+[resource]
+default_font = ExtResource("1_6vt6r")

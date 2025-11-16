@@ -6,4 +6,8 @@
 script = ExtResource("1_uuqvt")
 Name = "Epidemie in China!"
 Beschreibung = "Aufgrund des Corona Viruses hat sich die Chinesische Regierung dazu entschieden jegliche vorm von export und weiterem herunterzufahren. Alle Chinesichen Exporte -80%"
+Land = Array[String](["China"])
+Effekttyp = Array[int]([4])
+Stat = Array[String](["Uran"])
+Effekt = Array[float]([0.5])
 metadata/_custom_type_script = "uid://ux1376en0ad4"

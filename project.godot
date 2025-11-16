@@ -33,6 +33,7 @@ version_control/autoload_on_startup=true
 
 [gui]
 
+theme/custom="uid://ci4brwyw660re"
 theme/custom_font="uid://lnki723hijn4"
 
 [input]
