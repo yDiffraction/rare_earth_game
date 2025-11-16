@@ -46,4 +46,4 @@ Nuke={
 [rendering]
 
 textures/canvas_textures/default_texture_repeat=1
-environment/defaults/default_clear_color=Color(0.21568628, 0.45882353, 0.54509807, 1)
+environment/defaults/default_clear_color=Color(0.215686, 0.458824, 0.545098, 1)

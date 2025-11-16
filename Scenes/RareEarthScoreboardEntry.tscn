@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://bmo7lys8mwalj"]
+[gd_scene format=3 uid="uid://bmo7lys8mwalj"]
 
 [node name="HBoxContainer" type="HBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
@@ -10,6 +10,8 @@ scale = Vector2(1.467, 0.737251)
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+tooltip_text = "dsdfdsfds"
+mouse_filter = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 2

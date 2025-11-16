@@ -2,24 +2,27 @@ extends VBoxContainer
 @onready var CountryLabel = $HBoxContainer/CountryLabel
 @onready var list = $VBoxContainer
 var EntryScene := preload("res://Scenes/ExportSelectorEntry.tscn")
+var export_list
 var country
 var country_data
 var locked = false
 var nodes = []
 
-func showInfo(country: Area2D):
-	self.country = country
-	self.visible = true
-	print_debug(country)
-	country_data = matchName(country.name)
-	if !locked:
+func showInfo(country: Area2D, force=false):
+	if !locked or force:
+		self.country = country
+		self.visible = true
+		country_data = matchName(country.name)
 		CountryLabel.text = country_data.Name
 		_spawn_sliders(country_data.Exports)
 
 func _spawn_sliders(export_list):
+	if len(nodes)>0:
+		return
+	self.export_list = export_list
 	for i in export_list:
 		var entry = EntryScene.instantiate()
-		entry.get_node("Label").text = "%s:" % i[0]
+		entry.get_node("Label").text = "%s: %dt" % [i[0], i[1]]
 		var slider = entry.get_node("MarginContainer/HSlider")
 		slider.min_value = 0
 		slider.max_value = 0.5*i[1]+0.5*i[2]
@@ -28,9 +31,18 @@ func _spawn_sliders(export_list):
 
 		list.add_child(entry)
 		nodes.append(entry)
-	
-func hideInfo():
-	if !locked:
+
+func _process(delta: float) -> void:
+	if locked:
+		for i in range(len(nodes)):
+			var val = nodes[i].get_node("MarginContainer/HSlider").value
+			nodes[i].get_node("Label").text = "%s: %dt" % [export_list[i][0], val]
+			for c in range(len(DataLoader.Countrys)):
+				if DataLoader.Countrys[c].Name == country_data.Name:
+					DataLoader.Countrys[c].Exports[i][1] = val
+
+func hideInfo(force=false):
+	if !locked or force:
 		self.visible = false
 		for i in nodes:
 			i.queue_free()
@@ -46,5 +58,5 @@ func matchName(name):
 
 
 func _on_exit_button_pressed() -> void:
+	hideInfo(true)
 	locked = false
-	hideInfo()

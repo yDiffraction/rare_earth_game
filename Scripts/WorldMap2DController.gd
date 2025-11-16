@@ -17,11 +17,11 @@ func _ready():
 func _input(event):
 	if(event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and current_country != null):
 		if InfoPanel.locked:
-			InfoPanel.locked = false
-			InfoPanel.hideInfo()
-			InfoPanel.showInfo(current_country)
+			InfoPanel.hideInfo(true)
+			InfoPanel.showInfo(current_country, true)
 		InfoPanel.locked = true
 func _on_country_mouse_entered(country):
+	_on_country_mouse_exited(current_country)
 	#var collision_poly = country.get_node("CollisionPolygon2D")
 	#var poly = collision_poly.polygon
 	#highlight_poly.polygon = poly
@@ -37,9 +37,16 @@ func _on_country_mouse_entered(country):
 	
 	InfoPanel.showInfo(country)
 	TradeRouteDisplay.visible = true
-	TradeRouteDisplay.points = InfoPanel.country_data.Path
+	TradeRouteDisplay.points = matchName(country.name).Path
+
+func matchName(name):
+	for c in DataLoader.Countrys:
+		if c.Name == name:
+			return c
 
 func _on_country_mouse_exited(country):
+	if country==null:
+		return
 	#highlight_poly.visible = false
 	current_country = null
 	for node in currenthighlights:
