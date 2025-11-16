@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3akiyjaa5tlj"]
+[gd_scene load_steps=10 format=3 uid="uid://d3akiyjaa5tlj"]
 
 [ext_resource type="Script" uid="uid://c27jyectjgv4j" path="res://Scripts/WorldMap2DController.gd" id="1_r6rsh"]
 [ext_resource type="Texture2D" uid="uid://ch71i45mvw4te" path="res://assets/world.svg" id="2_324t1"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bq2oabtchy5xo" path="res://Scripts/scoreboard.gd" id="5_324t1"]
 [ext_resource type="Texture2D" uid="uid://dpt1635ioxyiq" path="res://assets/circle.png" id="5_qqiaq"]
 [ext_resource type="Script" uid="uid://0kaheu7ewki8" path="res://Scripts/rare_earths_scoreboard.gd" id="6_tuv03"]
+[ext_resource type="Texture2D" uid="uid://cub28du5wg5wg" path="res://assets/Unhappy.png" id="8_0gsno"]
 [ext_resource type="Script" uid="uid://djydn1lsmynmr" path="res://Scripts/turn_manager.gd" id="8_muyno"]
 
 [node name="WorldMap2DScene" type="Control"]
@@ -245,6 +246,15 @@ offset_top = 382.0
 offset_right = 82.0
 offset_bottom = 422.0
 scale = Vector2(0.72, 0.72)
+
+[node name="ZufriedenheitIcon" type="TextureRect" parent="Scoreboard"]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 3.0
+offset_right = 1169.0
+offset_bottom = 259.0
+scale = Vector2(0.19999975, 0.19999975)
+texture = ExtResource("8_0gsno")
 
 [node name="TurnManager" type="Node" parent="."]
 script = ExtResource("8_muyno")

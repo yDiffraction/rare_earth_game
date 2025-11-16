@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch71i45mvw4te"
-path="res://.godot/imported/world.svg-bd5aaba565c78f0db8685ee8304826ef.ctex"
+uid="uid://cub28du5wg5wg"
+path="res://.godot/imported/Unhappy.png-c27a07635b5389ca0e944f4e5f633762.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world.svg"
-dest_files=["res://.godot/imported/world.svg-bd5aaba565c78f0db8685ee8304826ef.ctex"]
+source_file="res://assets/Unhappy.png"
+dest_files=["res://.godot/imported/Unhappy.png-c27a07635b5389ca0e944f4e5f633762.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
