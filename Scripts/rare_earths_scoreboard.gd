@@ -16,7 +16,9 @@ var nodes = {}
 
 func add_earth(name: String, value: float, max_value: float):
 	var entry = EntryScene.instantiate()
-	entry.get_node("Label").text = "%s: %dt" % [name, value]
+	var label = entry.get_node("Label")
+	label.text = "%s: %dt" % [name, value]
+	#label.tooltip_text = "a"
 	var bar = entry.get_node("ProgressBar")
 	bar.max_value = max_value
 	bar.value = value
