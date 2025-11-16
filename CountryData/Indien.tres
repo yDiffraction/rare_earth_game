@@ -5,6 +5,5 @@
 [resource]
 script = ExtResource("1_ojd0v")
 Name = "Indien"
-Path = PackedVector2Array()
 Exports = [["Samarium", 0, 150]]
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"

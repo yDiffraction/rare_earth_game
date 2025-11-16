@@ -5,6 +5,5 @@
 [resource]
 script = ExtResource("1_x8irp")
 Name = "Russland"
-Path = PackedVector2Array()
 Exports = [["LaCe", 0, 10000]]
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"

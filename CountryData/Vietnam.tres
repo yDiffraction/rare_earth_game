@@ -5,6 +5,5 @@
 [resource]
 script = ExtResource("1_r20fx")
 Name = "Vietnam"
-Path = PackedVector2Array()
 Exports = [["DyTb", 0, 50]]
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"
