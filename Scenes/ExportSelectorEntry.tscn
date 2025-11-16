@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dqytuqf1wxy4d"]
+[gd_scene load_steps=0 format=3 uid="uid://dqytuqf1wxy4d"]
 
 [node name="HBoxContainer" type="HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
