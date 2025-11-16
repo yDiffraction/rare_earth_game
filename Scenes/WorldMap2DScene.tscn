@@ -255,7 +255,7 @@ offset_left = 913.0
 offset_top = 3.0
 offset_right = 1169.0
 offset_bottom = 259.0
-scale = Vector2(0.19999975, 0.19999975)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_0gsno")
 
 [node name="TurnManager" type="Node" parent="."]
