@@ -1,16 +1,22 @@
 [gd_scene format=3 uid="uid://dqytuqf1wxy4d"]
 
 [node name="HBoxContainer" type="HBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(263.81, 0)
 offset_right = 290.0
 offset_bottom = 40.0
+size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="."]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(153.26, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Container" type="Container" parent="."]
+custom_minimum_size = Vector2(21.465, 0)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-custom_minimum_size = Vector2(123.075, 0)
+custom_minimum_size = Vector2(127.885, 0)
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_constants/margin_top = 5
