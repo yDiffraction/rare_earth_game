@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_kop71")
 Name = "Myanmar"
-Exports = [["DyTb", 0, 1000, 4]]
+Exports = [["DyTb", 0, 1000, 487]]
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"

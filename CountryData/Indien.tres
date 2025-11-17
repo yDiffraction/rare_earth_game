@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_ojd0v")
 Name = "Indien"
-Exports = [["Sm", 0, 150, 4]]
+Exports = [["Sm", 0, 150, 12]]
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"
