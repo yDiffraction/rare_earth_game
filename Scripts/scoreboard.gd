@@ -5,9 +5,9 @@ extends Control
 @onready var wirtschaft_label = $Wirtschaft
 @onready var wirtschaft_bar   = $WirtschaftBar
 
-var zufriedenheit: int = 0
+var zufriedenheit: int = 70
 var max_zufriedenheit: int = 100
-var wirtschaft: int = 0
+var wirtschaft: int = 70
 var max_wirtschaft: int = 100
 
 @onready var happy = preload("res://assets/Happy.png")

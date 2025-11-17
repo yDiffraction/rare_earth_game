@@ -15,12 +15,12 @@ var events: Array[Callable] = []
 	["Sonstige", 0] #uae: 100t nigeria:100t south africa:100t peru:100t 
 ]
 var wirtschaftMultiplier = [
-	["NdPr", 1],
-	["DyTb", 1],
-	["LaCe", 1],
-	["Sm", 1],
-	["ScY", 1],
-	["Sonstige", 1]
+	["NdPr", 120],
+	["DyTb", 350],
+	["LaCe", 7],
+	["Sm", 20],
+	["ScY", 12],
+	["Sonstige", 80]
 ]
 
 func _ready():
@@ -43,18 +43,22 @@ func calc_year(setup=false):
 		for i in range(len(c.Exports)):
 			for i2 in range(len(earthList)):
 				if c.Exports[i][0]==earthList[i2][0]:
-					sumHandel +=  c.Exports[i][1] * wirtschaftMultiplier[i2][1]
+					#sumHandel +=  c.Exports[i][1] * wirtschaftMultiplier[i2][1]
 					SumAnsehen +=  c.Exports[i][1] * c.Ansehen
 					sumAusgaben +=  c.Exports[i][1] * c.Exports[i][3]
 					earthList[i2][1] += c.Exports[i][1]
-	print(sumHandel, " ", sumAusgaben, " ", SumAnsehen)
 	RareEarthScoreboard.update_scoreboard(earthList)
+	var earthList2 = RareEarthScoreboard.earthList
 	InfoPannel.new_turn()
+	for e in range(len(earthList2)):
+		sumHandel += clamp(earthList2[e][2], 0, earthList2[e][1]) * wirtschaftMultiplier[e][1]
+	print(sumHandel, " ", sumAusgaben, " ", SumAnsehen)
 	if setup:
 		return
 	if sumHandel != 0:
-		$"../Scoreboard".zufriedenheit = 25 * (SumAnsehen/sumHandel)
-		print_debug(SumAnsehen/sumHandel)
+		$"../Scoreboard".zufriedenheit += 230 * (float(SumAnsehen)/sumHandel) - 45
+		$"../Scoreboard".wirtschaft += 150 * (sumHandel/float(sumAusgaben)) - 280
+		$"../Scoreboard".zufriedenheit -= (50 - clamp($"../Scoreboard".wirtschaft, 0, 50)) / 10
 		$"../Scoreboard".update_scoreboard()
 	if $"../Scoreboard".zufriedenheit < 20:
 		var eventPopup = Eventpopup.instantiate()
