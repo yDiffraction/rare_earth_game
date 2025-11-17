@@ -38,7 +38,6 @@ func _spawn_sliders(export_list):
 		slider.min_value = 0
 		for c in range(len(DataLoader.Countrys)): #hier DataLoader.Countrys statt lastDataLoader zum suchen vom richtigen c
 			if DataLoader.Countrys[c].Name == country.name:
-				print(lastDataLoader[c][i][1])
 				slider.max_value = 0.5*lastDataLoader[c][i][1] + 0.5*export_list[i][2]
 		slider.value = export_list[i][1]
 		slider.step = 1
@@ -59,7 +58,6 @@ func new_turn():
 	lastDataLoader = []
 	for c in DataLoader.Countrys:
 		lastDataLoader.append(c.Exports.duplicate(true))
-	print(lastDataLoader)
 
 func hideInfo(force=false):
 	if !locked or force:

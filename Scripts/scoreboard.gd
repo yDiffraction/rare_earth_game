@@ -26,6 +26,8 @@ func add_wirtschaft(amount: int):
 	update_scoreboard()
 
 func update_scoreboard():
+	zufriedenheit = clamp(zufriedenheit, 0, 100)
+	wirtschaft = clamp(wirtschaft, 0, 100)
 	zufriedenheit_label.text = "Zufriedenheit: %s" % zufriedenheit + "%"
 	zufriedenheit_bar.value = zufriedenheit
 	if zufriedenheit >= 75:
