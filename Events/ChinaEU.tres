@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Events" load_steps=2 format=3 uid="uid://cd4bgals6w1uq"]
+
+[ext_resource type="Script" uid="uid://ux1376en0ad4" path="res://Scripts/Event.gd" id="1_17upr"]
+
+[resource]
+script = ExtResource("1_17upr")
+Name = "China und EU nähern sich an"
+Beschreibung = "China und die EU haben ein neues Handelsabkommen getroffen, wodurch der Handel von Seltenenerden weitaus einfacher und güstiger ist. alle Preise von China sinken um 20%"
+Land = Array[String](["China"])
+Effekttyp = Array[int]([6])
+Stat = Array[String](["1"])
+Effekt = Array[float]([0.8])
+metadata/_custom_type_script = "uid://ux1376en0ad4"

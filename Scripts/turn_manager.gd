@@ -101,3 +101,4 @@ func RandomEvent():
 				DataLoader.SetAnsehen(currentEvent.Land[i], currentEvent.Stat[i], currentEvent.Effekt[i])
 			currentEvent.Ef.ChangeAnsehen:
 				DataLoader.ChangeAnsehen(currentEvent.Land[i], currentEvent.Stat[i], currentEvent.Effekt[i])
+	DataLoader.AllEvents.erase(currentEvent)

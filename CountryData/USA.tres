@@ -6,6 +6,5 @@
 script = ExtResource("1_t8vwf")
 Name = "USA"
 Path = PackedVector2Array(-2, -4, -6, -19, -12, -18, -22, -7, -22, -3, -29, 4, -41, 7, -60, 15, -79, 16, -103, 25, -131, 45, -158, 53, -193, 56, -227, 49, -267, 47)
-Ansehen = 1
 Exports = [["NdPr", 0, 1000, 5]]
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"
