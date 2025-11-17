@@ -158,8 +158,14 @@ script = ExtResource("3_qqiaq")
 
 [node name="InfoPannel" type="VBoxContainer" parent="."]
 layout_mode = 1
-offset_right = 255.0
-offset_bottom = 86.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1138.0
+offset_top = 4.0
+offset_right = -938.0
+offset_bottom = 90.0
+grow_horizontal = 0
 script = ExtResource("4_324t1")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="InfoPannel"]

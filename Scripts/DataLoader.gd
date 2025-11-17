@@ -63,3 +63,25 @@ func MultiplyPrice(Target:String, Stat:String, Effekt:float):
 		if expo[0] == Stat:
 			targetStat = expo
 	targetStat[3] = Effekt * targetStat[3]
+	
+func SetAnsehen(Target:String, _Stat:String, Effekt:float):
+	var targetCountry
+	for c in Countrys:
+		if c.Name == Target:
+			targetCountry = c
+	targetCountry.Ansehen = Effekt
+	if targetCountry.Ansehen > 4:
+		targetCountry.Ansehen = 4
+	if targetCountry.Ansehen < 0:
+		targetCountry.Ansehen = 0
+	
+func ChangeAnsehen(Target:String, _Stat:String, Effekt:float):
+	var targetCountry
+	for c in Countrys:
+		if c.Name == Target:
+			targetCountry = c
+	targetCountry.Ansehen = targetCountry.Ansehen + Effekt
+	if targetCountry.Ansehen > 4:
+		targetCountry.Ansehen = 4
+	if targetCountry.Ansehen < 0:
+		targetCountry.Ansehen = 0

@@ -1,6 +1,8 @@
 extends Node
 @onready var Eventpopup :=  preload("res://Scenes/event_popup.tscn")
 @onready var InfoPannel = $"../InfoPannel"
+
+@onready var zustimmungEvent = preload("res://Events/zuunzufrieden.tres")
 var earthList = [
 	["NdPr", 0], #china:10.000t Australien:1.000t USA:1.000t
 	["DyTb", 0], #china:1500t japan:100t vietnam:50t(bisschen teurer) myanmar:1000t(sehr teuer)
@@ -20,20 +22,42 @@ func EndTurn():
 	#Änderung der zufriedenHeit, augehend vom Handelsvolumen der Länder
 
 func calc_year():
+	var sumHandel = 0
+	var SumAnsehen = 0
+	var sumAusgaben = 0
 	for i in range(len(earthList)):
 		earthList[i][1] = 0
 	for c in DataLoader.Countrys:
 		for i in range(len(c.Exports)):
 			for i2 in earthList:
 				if c.Exports[i][0]==i2[0]:
+					sumHandel +=  c.Exports[i][1]
+					SumAnsehen +=  c.Exports[i][1] * c.Ansehen
+					sumAusgaben +=  c.Exports[i][1] * c.Exports[i][3]
 					i2[1] += c.Exports[i][1]
 					c.Exports[i][1] = 0
+	if sumHandel != 0:
+		$"../Scoreboard".zufriedenheit = 25 * (SumAnsehen/sumHandel)
+		print_debug(SumAnsehen/sumHandel)
+		$"../Scoreboard".update_scoreboard()
+	if $"../Scoreboard".zufriedenheit < 20:
+		var eventPopup = Eventpopup.instantiate()
+		var currentEvent = zustimmungEvent
+		eventPopup.Name = currentEvent.Name
+		eventPopup.Description = currentEvent.Beschreibung
+		add_child(eventPopup)
+	else:
+		RandomEvent()
+	
 
 func _on_play_button_pressed() -> void:
 	EndTurn()
 
 
 func _on_debugevent_button_pressed() -> void:
+	RandomEvent()
+	
+func RandomEvent():
 	var eventPopup = Eventpopup.instantiate()
 	var currentEvent = DataLoader.AllEvents[randi_range(0, DataLoader.AllEvents.size() -1)]
 	eventPopup.Name = currentEvent.Name
@@ -57,3 +81,7 @@ func _on_debugevent_button_pressed() -> void:
 				DataLoader.MultiplyAllPrices(currentEvent.Land[i], currentEvent.Stat[i], currentEvent.Effekt[i])
 			currentEvent.Ef.MultiplyPrice:
 				DataLoader.MultiplyPrice(currentEvent.Land[i], currentEvent.Stat[i], currentEvent.Effekt[i])
+			currentEvent.Ef.SetAnsehen:
+				DataLoader.SetAnsehen(currentEvent.Land[i], currentEvent.Stat[i], currentEvent.Effekt[i])
+			currentEvent.Ef.ChangeAnsehen:
+				DataLoader.ChangeAnsehen(currentEvent.Land[i], currentEvent.Stat[i], currentEvent.Effekt[i])

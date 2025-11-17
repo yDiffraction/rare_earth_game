@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Events" load_steps=2 format=3 uid="uid://buixp8y28he2a"]
+
+[ext_resource type="Script" uid="uid://ux1376en0ad4" path="res://Scripts/Event.gd" id="1_bvwhb"]
+
+[resource]
+script = ExtResource("1_bvwhb")
+Name = "Revolution!"
+Beschreibung = "Dein Handel mit Ländern, die das Volk nicht mag, hat dazu geführt, dass die Stimmung im Land so stark gegen die Regierung war, dass eine Revolution deine Regierung gestürtzt hat."
+metadata/_custom_type_script = "uid://ux1376en0ad4"

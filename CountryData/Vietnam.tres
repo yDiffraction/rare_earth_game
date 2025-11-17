@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_r20fx")
 Name = "Vietnam"
-Exports = [["DyTb", 0, 50]]
+Exports = [["DyTb", 0, 50, 6]]
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"

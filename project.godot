@@ -24,6 +24,10 @@ DataLoader="*res://Scenes/data_info_loader.tscn"
 
 [display]
 
+window/size/mode=3
+window/size/resizable=false
+window/size/borderless=true
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
 [editor]

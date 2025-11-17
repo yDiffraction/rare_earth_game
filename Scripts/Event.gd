@@ -6,7 +6,7 @@ extends Resource
 @export_category("Effekt:")
 @export var Land : Array[String]
 @export var Effekttyp: Array[Ef]
-enum Ef {Multiply, Add, Delete, MultiplyAll, DeleteAll, MultiplyPrice, MultiplyAllPrices}
+enum Ef {Multiply, Add, Delete, MultiplyAll, DeleteAll, MultiplyPrice, MultiplyAllPrices, SetAnsehen, ChangeAnsehen}
 var item_type : String = "Effekt"
 
 

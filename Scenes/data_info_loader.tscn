@@ -13,7 +13,7 @@
 [ext_resource type="Resource" uid="uid://bu4iokfdviy0t" path="res://CountryData/Japan.tres" id="9_1mhro"]
 [ext_resource type="Resource" uid="uid://cdp81ehofuhvv" path="res://CountryData/Nigeria.tres" id="10_53vv0"]
 [ext_resource type="Resource" uid="uid://cl8jt1mfkropp" path="res://CountryData/Peru.tres" id="12_gvhf8"]
-[ext_resource type="Resource" path="res://CountryData/Südafrika.tres" id="12_ttmbs"]
+[ext_resource type="Resource" uid="uid://nh5a2i3to3xn" path="res://CountryData/Südafrika.tres" id="12_ttmbs"]
 [ext_resource type="Resource" uid="uid://bivbcwy5onbah" path="res://CountryData/Vietnam.tres" id="15_0d2hc"]
 [ext_resource type="Resource" uid="uid://bkqxu7r74n381" path="res://CountryData/Russland.tres" id="16_djb0q"]
 [ext_resource type="Script" uid="uid://ux1376en0ad4" path="res://Scripts/Event.gd" id="17_ttmbs"]

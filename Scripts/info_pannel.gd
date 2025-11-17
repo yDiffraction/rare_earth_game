@@ -13,7 +13,17 @@ func showInfo(country: Area2D, force=false):
 		self.country = country
 		self.visible = true
 		country_data = matchName(country.name)
-		CountryLabel.text = country_data.Name
+		match country_data.Ansehen:
+			0:
+				CountryLabel.text = country_data.Name + " | --" 
+			1:
+				CountryLabel.text = country_data.Name + " | -" 
+			2:
+				CountryLabel.text = country_data.Name + " | O" 
+			3:
+				CountryLabel.text = country_data.Name + " | +" 
+			4:
+				CountryLabel.text = country_data.Name + " | ++" 
 		_spawn_sliders(country_data.Exports)
 
 func _spawn_sliders(export_list):
@@ -22,10 +32,10 @@ func _spawn_sliders(export_list):
 	self.export_list = export_list
 	for i in export_list:
 		var entry = EntryScene.instantiate()
-		entry.get_node("Label").text = "%s: %dt" % [i[0], i[1]]
+		entry.get_node("Label").text = "%s: %dt" % [i[0], i[1]] + " | " + str(i[3]) +"$pt"
 		var slider = entry.get_node("MarginContainer/HSlider")
 		slider.min_value = 0
-		slider.max_value = 0.5*i[1]+0.5*i[2]
+		slider.max_value = i[2]
 		slider.value = i[1]
 		slider.step = 1
 
@@ -36,7 +46,7 @@ func _process(delta: float) -> void:
 	if locked:
 		for i in range(len(nodes)):
 			var val = nodes[i].get_node("MarginContainer/HSlider").value
-			nodes[i].get_node("Label").text = "%s: %dt" % [export_list[i][0], val]
+			nodes[i].get_node("Label").text = "%s: %dt" % [export_list[i][0], val] + " | " + str(export_list[i][3]) + "$pt"
 			for c in range(len(DataLoader.Countrys)):
 				if DataLoader.Countrys[c].Name == country_data.Name:
 					DataLoader.Countrys[c].Exports[i][1] = val
