@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://din52mluld6gy"]
+[gd_scene load_steps=25 format=3 uid="uid://din52mluld6gy"]
 
 [ext_resource type="Script" uid="uid://d07wpie33uyaq" path="res://Scripts/DataLoader.gd" id="1_0ab52"]
 [ext_resource type="Script" uid="uid://b8wrsim3s4ebw" path="res://Scripts/CountryINfoContainer.gd" id="2_atbei"]
@@ -22,8 +22,10 @@
 [ext_resource type="Resource" uid="uid://5pal2yno5aw2" path="res://Events/Taiwan.tres" id="20_18tbv"]
 [ext_resource type="Resource" uid="uid://bt5nu6uhx43ag" path="res://Events/MyanmarUmsturz.tres" id="21_1as1l"]
 [ext_resource type="Resource" uid="uid://cd4bgals6w1uq" path="res://Events/ChinaEU.tres" id="22_cl1nj"]
+[ext_resource type="Resource" uid="uid://bpxodwf7k21rf" path="res://Events/ChinaErdbeben.tres" id="23_iv3we"]
+[ext_resource type="Resource" uid="uid://b1beyny5xdbod" path="res://Events/Ölpreise.tres" id="24_xsyxp"]
 
 [node name="DataInfoLoader" type="Node"]
 script = ExtResource("1_0ab52")
 Countrys = Array[ExtResource("2_atbei")]([ExtResource("3_7sndx"), ExtResource("3_kwo8b"), ExtResource("4_kwo8b"), ExtResource("6_djb0q"), ExtResource("9_1mhro"), ExtResource("8_522x6"), ExtResource("10_53vv0"), ExtResource("12_gvhf8"), ExtResource("16_djb0q"), ExtResource("12_ttmbs"), ExtResource("5_hgyyt"), ExtResource("8_23sld"), ExtResource("7_d3ed2"), ExtResource("15_0d2hc")])
-AllEvents = Array[ExtResource("17_ttmbs")]([ExtResource("18_0d2hc"), ExtResource("19_0d2hc"), ExtResource("20_18tbv"), ExtResource("21_1as1l"), ExtResource("22_cl1nj")])
+AllEvents = Array[ExtResource("17_ttmbs")]([ExtResource("18_0d2hc"), ExtResource("19_0d2hc"), ExtResource("20_18tbv"), ExtResource("21_1as1l"), ExtResource("22_cl1nj"), ExtResource("23_iv3we"), ExtResource("24_xsyxp")])

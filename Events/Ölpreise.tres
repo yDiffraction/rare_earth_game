@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Events" load_steps=2 format=3 uid="uid://b1beyny5xdbod"]
+
+[ext_resource type="Script" uid="uid://ux1376en0ad4" path="res://Scripts/Event.gd" id="1_1ew1x"]
+
+[resource]
+script = ExtResource("1_1ew1x")
+Name = "Ölpreise steigen"
+Beschreibung = "Die Ölpreise steigeny wodurch der Transport sehr viel Teuerer wird und deswegen alle Preise um 5% steigen."
+Land = Array[String](["Australien", "China", "Indien", "Japan", "Myanmar", "Nigeria", "Peru", "Russland", "Südafrika", "Thailand", "UAE", "USA", "Vietnam"])
+Effekttyp = Array[int]([6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6])
+Stat = Array[String](["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"])
+Effekt = Array[float]([1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1])
+metadata/_custom_type_script = "uid://ux1376en0ad4"

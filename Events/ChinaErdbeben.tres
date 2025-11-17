@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Events" load_steps=2 format=3 uid="uid://bpxodwf7k21rf"]
+
+[ext_resource type="Script" uid="uid://ux1376en0ad4" path="res://Scripts/Event.gd" id="1_bw00q"]
+
+[resource]
+script = ExtResource("1_bw00q")
+Name = "Erdbeben in China"
+Beschreibung = "In ganz China hat ein starkes Erdbeeben die Minen teilweise zum Einstürzen gebracht. Chinas gesamter Export singt um 50%"
+Land = Array[String](["China"])
+Effekttyp = Array[int]([3])
+Stat = Array[String]([""])
+Effekt = Array[float]([0.5])
+metadata/_custom_type_script = "uid://ux1376en0ad4"
