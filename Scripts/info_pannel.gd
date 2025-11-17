@@ -33,7 +33,7 @@ func _spawn_sliders(export_list):
 	self.export_list = export_list
 	for i in range(len(export_list)):
 		var entry = EntryScene.instantiate()
-		entry.get_node("Label").text = "%s: %dt" % [export_list[i][0], export_list[i][1]] + " | " + str(export_list[i][3]) +"$pt"
+		entry.get_node("Label").text = "%s: %dt" % [export_list[i][0], export_list[i][1]] + " | " + str(export_list[i][3]) +"k$pt"
 		var slider = entry.get_node("MarginContainer/HSlider")
 		slider.min_value = 0
 		for c in range(len(DataLoader.Countrys)): #hier DataLoader.Countrys statt lastDataLoader zum suchen vom richtigen c
@@ -49,7 +49,7 @@ func _process(delta: float) -> void:
 	if locked:
 		for i in range(len(nodes)):
 			var val = nodes[i].get_node("MarginContainer/HSlider").value
-			nodes[i].get_node("Label").text = "%s: %dt" % [export_list[i][0], val] + " | " + str(export_list[i][3]) + "$pt"
+			nodes[i].get_node("Label").text = "%s: %dt" % [export_list[i][0], val] + " | " + str(export_list[i][3]) + "k$pt"
 			for c in range(len(DataLoader.Countrys)):
 				if DataLoader.Countrys[c].Name == country_data.Name:
 					DataLoader.Countrys[c].Exports[i][1] = val
