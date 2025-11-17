@@ -1,9 +1,11 @@
 extends Node
 @onready var Eventpopup :=  preload("res://Scenes/event_popup.tscn")
 @onready var InfoPannel = $"../InfoPannel"
+@onready var RareEarthScoreboard = $"../Scoreboard/RareEarths"
+var rng = RandomNumberGenerator.new()
 
 @onready var zustimmungEvent = preload("res://Events/zuunzufrieden.tres")
-var earthList = [
+@export var earthList = [
 	["NdPr", 0], #china:10.000t Australien:1.000t USA:1.000t
 	["DyTb", 0], #china:1500t japan:100t vietnam:50t(bisschen teurer) myanmar:1000t(sehr teuer)
 	["LaCe", 0], #china:20.000t russland:10.000t
@@ -11,6 +13,17 @@ var earthList = [
 	["ScY", 0], #china:3000t thailand:500t
 	["Sonstige", 0] #uae: 100t nigeria:100t south africa:100t peru:100t 
 ]
+var wirtschaftMultiplier = [
+	["NdPr", 1],
+	["DyTb", 1],
+	["LaCe", 1],
+	["Sm", 1],
+	["ScY", 1],
+	["Sonstige", 1]
+]
+
+func _ready():
+	calc_year(true)
 
 func EndTurn():
 	print_debug("Jahrvorbei")
@@ -21,7 +34,7 @@ func EndTurn():
 	#Momentane Wirtschaft - Ausgaben + Gewinn kalkuliert aus deckung der einzelnen Bedarfe
 	#Änderung der zufriedenHeit, augehend vom Handelsvolumen der Länder
 
-func calc_year():
+func calc_year(setup=false):
 	var sumHandel = 0
 	var SumAnsehen = 0
 	var sumAusgaben = 0
@@ -29,13 +42,16 @@ func calc_year():
 		earthList[i][1] = 0
 	for c in DataLoader.Countrys:
 		for i in range(len(c.Exports)):
-			for i2 in earthList:
-				if c.Exports[i][0]==i2[0]:
-					sumHandel +=  c.Exports[i][1]
+			for i2 in range(len(earthList)):
+				if c.Exports[i][0]==earthList[i2][0]:
+					sumHandel +=  c.Exports[i][1] * wirtschaftMultiplier[i2][1]
 					SumAnsehen +=  c.Exports[i][1] * c.Ansehen
 					sumAusgaben +=  c.Exports[i][1] * c.Exports[i][3]
-					i2[1] += c.Exports[i][1]
-					c.Exports[i][1] = 0
+					earthList[i2][1] += c.Exports[i][1]
+	RareEarthScoreboard.update_scoreboard(earthList)
+	InfoPannel.new_turn()
+	if setup:
+		return
 	if sumHandel != 0:
 		$"../Scoreboard".zufriedenheit = 25 * (SumAnsehen/sumHandel)
 		print_debug(SumAnsehen/sumHandel)

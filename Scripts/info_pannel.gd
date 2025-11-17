@@ -7,6 +7,7 @@ var country
 var country_data
 var locked = false
 var nodes = []
+var lastDataLoader = null
 
 func showInfo(country: Area2D, force=false):
 	if !locked or force:
@@ -30,13 +31,16 @@ func _spawn_sliders(export_list):
 	if len(nodes)>0:
 		return
 	self.export_list = export_list
-	for i in export_list:
+	for i in range(len(export_list)):
 		var entry = EntryScene.instantiate()
-		entry.get_node("Label").text = "%s: %dt" % [i[0], i[1]] + " | " + str(i[3]) +"$pt"
+		entry.get_node("Label").text = "%s: %dt" % [export_list[i][0], export_list[i][1]] + " | " + str(export_list[i][3]) +"$pt"
 		var slider = entry.get_node("MarginContainer/HSlider")
 		slider.min_value = 0
-		slider.max_value = i[2]
-		slider.value = i[1]
+		for c in range(len(DataLoader.Countrys)): #hier DataLoader.Countrys statt lastDataLoader zum suchen vom richtigen c
+			if DataLoader.Countrys[c].Name == country.name:
+				print(lastDataLoader[c][i][1])
+				slider.max_value = 0.5*lastDataLoader[c][i][1] + 0.5*export_list[i][2]
+		slider.value = export_list[i][1]
 		slider.step = 1
 
 		list.add_child(entry)
@@ -50,6 +54,12 @@ func _process(delta: float) -> void:
 			for c in range(len(DataLoader.Countrys)):
 				if DataLoader.Countrys[c].Name == country_data.Name:
 					DataLoader.Countrys[c].Exports[i][1] = val
+
+func new_turn():
+	lastDataLoader = []
+	for c in DataLoader.Countrys:
+		lastDataLoader.append(c.Exports.duplicate(true))
+	print(lastDataLoader)
 
 func hideInfo(force=false):
 	if !locked or force:

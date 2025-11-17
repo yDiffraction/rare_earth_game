@@ -6,5 +6,5 @@
 script = ExtResource("1_x8irp")
 Name = "Russland"
 Ansehen = 1
-Exports = [["LaCe", 0, 10000, 4]]
+Exports = [["LaCe", 700, 10000, 4]]
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"

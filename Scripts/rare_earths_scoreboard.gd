@@ -14,6 +14,15 @@ var earthList = [
 ]
 var nodes = {}
 
+func update_scoreboard(earthList):
+	for i in range(len(earthList)):
+		self.earthList[i][2] = earthList[i][1]
+		var node = nodes[earthList[i][0]]
+		var label = node.get_node("Label")
+		label.text = "%s: %dt" % [earthList[i][0], earthList[i][1]]
+		var bar = node.get_node("ProgressBar")
+		bar.value = earthList[i][1]
+
 func add_earth(name: String, value: float, max_value: float):
 	var entry = EntryScene.instantiate()
 	var label = entry.get_node("Label")

@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_vpk3l")
 Name = "Südafrika"
-Exports = [["Sonstige", 0, 100, 2]]
+Exports = [["Sonstige", 20, 100, 2]]
 metadata/_custom_type_script = "uid://b8wrsim3s4ebw"
