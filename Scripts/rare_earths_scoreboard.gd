@@ -23,6 +23,12 @@ func update_scoreboard(earthList):
 		var bar = node.get_node("ProgressBar")
 		bar.value = earthList[i][1]
 
+func update_partially(earthList):
+	for i in range(len(earthList)):
+		var node = nodes[earthList[i][0]]
+		var bar2 = node.get_node("ProgressBar/ProgressBar")
+		bar2.value = earthList[i][1]
+
 func add_earth(name: String, value: float, max_value: float, tooltip: String):
 	var entry = EntryScene.instantiate()
 	var label = entry.get_node("Label")
@@ -31,6 +37,9 @@ func add_earth(name: String, value: float, max_value: float, tooltip: String):
 	var bar = entry.get_node("ProgressBar")
 	bar.max_value = max_value
 	bar.value = value
+	var bar2 = entry.get_node("ProgressBar/ProgressBar")
+	bar2.max_value = max_value
+	bar2.value = value
 
 	list.add_child(entry)
 	nodes[name] = entry

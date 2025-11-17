@@ -1,4 +1,13 @@
-[gd_scene format=3 uid="uid://bmo7lys8mwalj"]
+[gd_scene load_steps=3 format=3 uid="uid://bmo7lys8mwalj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d5tup"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uregc"]
+bg_color = Color(1, 0.26040867, 0.3096767, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="HBoxContainer" type="HBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
@@ -16,3 +25,13 @@ mouse_filter = 1
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="ProgressBar"]
+z_index = -1
+layout_mode = 0
+offset_right = 195.45467
+offset_bottom = 27.0
+theme_override_styles/background = SubResource("StyleBoxTexture_d5tup")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uregc")
+value = 50.0
+show_percentage = false

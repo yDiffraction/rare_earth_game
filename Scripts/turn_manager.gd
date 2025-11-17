@@ -26,6 +26,17 @@ var wirtschaftMultiplier = [
 func _ready():
 	calc_year(true)
 
+func _process(delta: float) -> void:
+	var earthList2 = earthList.duplicate(true)
+	for i in range(len(earthList2)):
+		earthList2[i][1] = 0
+	for c in DataLoader.Countrys:
+		for i in range(len(c.Exports)):
+			for i2 in range(len(earthList2)):
+				if c.Exports[i][0]==earthList2[i2][0]:
+					earthList2[i2][1] += c.Exports[i][1]
+	RareEarthScoreboard.update_partially(earthList2)
+
 func EndTurn():
 	InfoPannel.hideInfo(true) #notwendig weil ich schlecht gecoded hab
 	calc_year()
