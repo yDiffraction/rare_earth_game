@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Events" load_steps=2 format=3 uid="uid://bt5nu6uhx43ag"]
+
+[ext_resource type="Script" uid="uid://ux1376en0ad4" path="res://Scripts/Event.gd" id="1_sjbaa"]
+
+[resource]
+script = ExtResource("1_sjbaa")
+Name = "Umsturz in Myanmar"
+Beschreibung = "Die Regierung in Myanmar wurde gestürtzt! Deswegen liegt der Handel mit der Aussenwlt dort jetzt auf Eis. Myanmar hat keine Exporte mehr."
+Land = Array[String](["Myanmar"])
+Effekttyp = Array[int]([4])
+Stat = Array[String](["1"])
+Effekt = Array[float]([1.0])
+metadata/_custom_type_script = "uid://ux1376en0ad4"

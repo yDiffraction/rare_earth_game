@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Events" load_steps=2 format=3 uid="uid://5pal2yno5aw2"]
+
+[ext_resource type="Script" uid="uid://ux1376en0ad4" path="res://Scripts/Event.gd" id="1_6ph4e"]
+
+[resource]
+script = ExtResource("1_6ph4e")
+Name = "China nimmt Taiwan ein"
+Beschreibung = "Das Chinesiche Militär hat die Regierung von Taiwan gestürtzt und das Land unter seine Kontrolle gebracht. Diese Demokratiefeindliche Handeln finden die Bürger schlecht. Das Ansehen von China sinkt stark."
+Land = Array[String](["China"])
+Effekttyp = Array[int]([7])
+Stat = Array[String](["1"])
+Effekt = Array[float]([0.0])
+metadata/_custom_type_script = "uid://ux1376en0ad4"

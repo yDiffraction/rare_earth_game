@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Events" load_steps=2 format=3 uid="uid://j8wi0w28hh8t"]
+
+[ext_resource type="Script" uid="uid://ux1376en0ad4" path="res://Scripts/Event.gd" id="1_m2svo"]
+
+[resource]
+script = ExtResource("1_m2svo")
+Name = "Trump wird Präsident"
+Beschreibung = "Donald Trump wird der nächste US Präsident. Durch seine Zölle steigen alle US Preise um 80% und die stimmung der bevölkerung Gegenüber den USA sinkt."
+Land = Array[String](["USA", "USA"])
+Effekttyp = Array[int]([6, 8])
+Stat = Array[String](["3", "1"])
+Effekt = Array[float]([1.8, -1.0])
+metadata/_custom_type_script = "uid://ux1376en0ad4"
